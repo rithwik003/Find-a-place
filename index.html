@@ -1,0 +1,220 @@
+<!DOCTYPE>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-40J45DFWSR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-40J45DFWSR');
+    </script>
+    <meta name="description" content="Find a place will helps you to find out the best place for your holiday and make your days more memorable.">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Rithwik amaraneni,tourism,tourist places in india,best places in india,good places,best places,rithwik003,rithwik,top places ,top places in india,rithwik tour,rithwik003,rithwik03,amaraneni,tours,globe,travels">
+    <meta name="author" content="Rithwik Amaraneni">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
+    <title>Find a place</title>
+    <link type="image/png" sizes="32x32" rel="icon" href="tour.png">
+    <meta name="google-signin-client_id" content="252564052586-9icbeu649li24oou4s305javn9v9o5g7.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <!---background:linear-gradient(to top,rgb(97, 180, 235) 0%, rgb(241, 99, 168) 100%);--->
+    <style>
+    body{
+      width:95%;
+      margin:0;
+      background:linear-gradient(335deg ,rgb(110, 184, 234) 0%, rgb(241, 115, 176));
+      background-attachment:fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+    }
+    .form{
+      text-align:center;
+      padding-top:1%;
+    }
+    .user{
+      font-size:20px;
+      border-radius:20px;
+      border-color:blueviolet;
+      text-align:center;
+    }
+    .pass{
+      font-size:20px;
+      border-radius:20px;
+      border-color:blueviolet;
+      text-align:center;
+    }
+    .user1{
+      font-size:25px;
+      text-align:center;
+    }
+    .pass1{
+      font-size:25px;
+      text-align:center;
+    }
+    .submit{
+      background-color:rgb(155, 234, 148);
+      font-size:25px;
+      border-radius:20px;
+      padding-left:20px;
+      padding-right:20px;
+      text-align:center;
+      cursor:pointer;
+    }
+    .submit:hover{
+      background-color:rgb(212, 166, 247);
+    }
+    .login{
+      text-align:center;
+      font-size:30px;
+    }
+    img{
+      text-align:center;
+      padding-left:39%;
+    }
+    .x1{
+        font-size:15px;
+        text-align:center;
+    }
+    .x2{
+        font-size:15px;
+        text-align:center;
+    }
+
+    /* Media queries for responsive design */
+    @media only screen and (max-width: 600px) {
+      .user, .pass, .user1, .pass1, .submit, .login, img, .x1, .x2 {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+      }
+      img{
+        height: 50%;
+      }
+    }
+
+    </style>
+    
+  </head>
+  <!--body{
+        margin:0;
+        background:linear-gradient(335deg ,rgb(110, 184, 234) 0%, rgb(241, 115, 176));
+        background-attachment:fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+      }
+      .form{
+        text-align:center;
+        padding-top:1%;
+      }
+      .user{
+        font-size:20px;
+        border-radius:20px;
+        border-color:blueviolet;
+        text-align:center;
+      }
+      .pass{
+        font-size:20px;
+        border-radius:20px;
+        border-color:blueviolet;
+        text-align:center;
+      }
+      .user1{
+        font-size:25px;
+        text-align:center;
+      }
+      .pass1{
+        font-size:25px;
+        text-align:center;
+      }
+      .submit{
+        background-color:aliceblue;
+        font-size:25px;
+        border-radius:20px;
+        padding-left:20px;
+        padding-right:20px;
+        text-align:center;
+        cursor:pointer;
+      }
+      .submit:hover{
+        background-color:rgb(212, 166, 247);
+      }
+      .login{
+        text-align:center;
+        font-size:30px;
+      }
+      img{
+        text-align:center;
+        padding-left:39%;
+        
+      }-->
+  <body>
+    <img src="logo1.png" alt="logo" width="25%" height="43%">
+    <div class="login">
+      <form  class="form" action="web.html" onsubmit="return authenticate()">
+        <label class="head">LOGIN</label>
+        <br>
+        <br>
+        <label class="user1" for="username">Username  :</label>
+        <!-- added IDs to the inputs -->
+        <input
+          id="username"
+          class="user"
+          type="text"
+          placeholder="Enter Username"
+          name="username"
+          required
+        /><br>
+        <label class="x1">Username: rithwik</label>
+        <br>
+        <br>
+        <label class="pass1" for="password">Password  :</label>
+        <input
+          class="pass"
+          id="password"
+          type="password"
+          placeholder="Enter Password"
+          name="password"
+          required
+        />
+        <br>
+        <label class="x2" >Password: 12345678</label>
+        <br>
+        <br>
+        <br>
+        <button class="submit" type="submit">Login</button>
+        <br>
+        <br>
+        <br>
+        <br>
+      </form>
+      
+      
+      <script>
+      
+      //Following function gets values of the username and password fields and checks to see if they match a hard coded username and password 
+        function authenticate(){
+          var authorised;
+          
+          //get input values
+          var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+          
+          //check to see if the password and username match
+          if(username=="rithwik"&& password == "12345678"){
+            authorised = true;
+          }else{ // username or password do not match
+            authorised = false;
+            //alert user
+            alert("Sorry, password is incorrect.");
+          }
+          //return result
+          return authorised;
+        }
+      </script>
+    </div>
+  </body>
+</html>
